@@ -1,0 +1,70 @@
+/* Only affects the Register page container */
+.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #ff9966, #ff5e62);
+  font-family: "Poppins", sans-serif;
+}
+
+.register-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #ff5e62;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 94, 98, 0.5);
+}
+
+button {
+  background: #ff5e62;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #ff9966;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: -5px;
+  text-align: left;
+}

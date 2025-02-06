@@ -1,0 +1,88 @@
+.profile-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+h1, h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  color: #666;
+}
+
+.list-container {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.patient-item, .appointment-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+button {
+  background: #ff5e62;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #ff9966;
+}
+
+.no-data {
+  color: #999;
+  font-style: italic;
+}
+
+.patient-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.date-picker-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  margin-left: 10px;
+}
+
+.date-picker-container h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.date-picker-container button {
+  margin-top: 10px;
+}
+
+.profile-page .profile-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  background-color: #f7f7f7;
+}
+
+.profile-page {
+  background-color: #f0f0f0;
+}
