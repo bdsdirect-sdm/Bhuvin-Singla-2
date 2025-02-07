@@ -4,6 +4,14 @@ import User from "../models/User";
 
 const router = express.Router();
 
+router.get('/get-secret-key', (req, res) => {
+  const secretKey = process.env.SECRET_API_KEY; // Fetch from environment variable
+  res.json({
+    success: true,
+    key: secretKey
+  });
+});
+
 router.post("/create", async (req, res) => {
   try {
     const { doctorId, patientId, dateTime, timezone } = req.body;
