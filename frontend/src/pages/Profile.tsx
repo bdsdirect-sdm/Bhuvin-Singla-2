@@ -129,7 +129,7 @@ const Profile = () => {
   // Component JSX
   return (
     <div className="profile-container">
-      <button onClick={handleLogout}>Logout</button>
+
       <h1>Welcome, {user?.firstName}</h1>
       <p>Role: {user?.type === 1 ? "Doctor" : "Patient"}</p>
 
@@ -172,10 +172,10 @@ const Profile = () => {
             appointments.map((appointment) => (
               <div key={appointment.id} className="appointment-item">
                 <span>
-                  Doctor (Your Time): {appointment.doctor.firstName}{" "}
-                  {appointment.doctor.lastName} - {appointment.patientLocalTime}
+                  Your Time: {appointment.doctor.firstName}{" "}
+                  {appointment.doctor.lastName} - {appointment.doctorLocalTime}
                   <br />
-                  Patient Appointment Time: {appointment.doctorLocalTime}
+                  Patient's ({appointment.patient.firstName}) Appointment Time: {appointment.patientLocalTime} ({appointment.patient.timezone})
                 </span>
               </div>
             ))
@@ -204,6 +204,8 @@ const Profile = () => {
           )}
         </div>
       )}
+      <br />
+      <button onClick={handleLogout}>Logout</button>
     </div>
   );
 };

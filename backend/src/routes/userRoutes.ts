@@ -35,17 +35,17 @@ router.post("/login", async (req, res) => {
 
     // Check if user exists
     if (!user) {
-      console.log("❌ User not found");
+      console.log("User not found");
       return res.status(401).json({ error: "Invalid credentials" });
     }
 
     // Access password from dataValues
     const storedPassword = user.dataValues.password;
-    console.log("🔍 Stored Password:", storedPassword);  // Log stored password
+    console.log("Stored Password:", storedPassword);  // Log stored password
 
     // Directly compare the entered password with the stored password
     if (password !== storedPassword) {
-      console.log("❌ Password does not match");
+      console.log(" Password does not match");
       return res.status(401).json({ error: "Invalid credentials" });
     }
 
@@ -60,7 +60,7 @@ router.post("/login", async (req, res) => {
 
     res.json({ message: "Login successful", token, user });
   } catch (error) {
-    console.error("❌ Login error:", error);
+    console.error("Login error:", error);
     res.status(500).json({ error: "Error logging in" });
   }
 });
@@ -70,8 +70,8 @@ router.get("/patients/:doctorId", async (req, res) => {
     const { doctorId } = req.params;
     const patients = await User.findAll({ where: { type: 2 } });
     res.json(patients);
-  } 
-  catch (error:any) {
+  }
+  catch (error: any) {
     res.status(500).json({ error: "Error fetching patients" });
   }
 });
