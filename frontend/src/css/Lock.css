@@ -1,0 +1,134 @@
+/* Lock Page Container */
+.lock-page {
+    background-image: url("unfocused-view-airport-with-seats.jpg");
+
+    /* Replace with your actual image path */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Lock Container */
+.lock-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Semi-transparent dark background */
+    padding: 30px;
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    /* Shadow effect */
+    width: 400px;
+    /* Lock container width */
+    text-align: center;
+    opacity: 0.85;
+}
+
+/* Header Text Styling */
+.header-text {
+    color: #dadada;
+    /* Light text color */
+    font-size: 24px;
+    /* Larger font */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* QR Code Styling */
+.qr-code {
+    margin-bottom: 20px;
+    /* Space below the QR code */
+}
+
+/* Input Field Styling */
+.formik-input {
+    width: 100%;
+    /* Full width input */
+    padding: 12px;
+    /* Padding for usability */
+    margin-bottom: 15px;
+    /* Space between inputs */
+    background-color: #2a2a2a;
+    /* Dark input background */
+    border: none;
+    /* Remove border */
+    color: #fff;
+    /* Light text color */
+    border-radius: 5px;
+    /* Rounded corners */
+    font-size: 16px;
+    /* Larger font for readability */
+    box-sizing: border-box;
+    /* Avoid padding affecting width */
+}
+
+/* Input Hover State */
+.formik-input:hover {
+    background-color: #393939;
+    /* Slightly lighter background */
+    border: 1px solid #70db70;
+    /* Green border */
+}
+
+/* Input Focus State */
+.formik-input:focus {
+    outline: none;
+    /* Remove browser outline */
+    border: 1px solid #70db70;
+    /* Green border */
+    box-shadow: 0 0 8px rgba(112, 219, 112, 0.7);
+    /* Subtle glow effect */
+}
+
+/* Error Message */
+.error {
+    color: red;
+    /* Red error message color */
+    margin-top: 5px;
+    font-size: 12px;
+    /* Smaller font size */
+    text-align: left;
+    /* Align to left */
+}
+
+/* Button Styling */
+.lock-button {
+    width: 100%;
+    /* Full width button */
+    padding: 12px;
+    /* Button padding */
+    margin-top: 15px;
+    /* Space above button */
+    background-color: #70db70;
+    /* Green button */
+    border: none;
+    /* No border */
+    color: #fff;
+    /* White text */
+    font-size: 16px;
+    /* Larger font */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor */
+    transition: background 0.3s ease;
+    /* Smooth hover transition */
+}
+
+/* Button Hover State */
+.lock-button:hover {
+    background-color: #52a852;
+    /* Darker green on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .lock-container {
+        width: 90%;
+        /* Adapt container width */
+    }
+}

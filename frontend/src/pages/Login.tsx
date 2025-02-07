@@ -22,6 +22,7 @@ const Login = () => {
       localStorage.setItem("user", JSON.stringify(response.data.user));
       navigate("/profile");
     } catch (error) {
+      console.log("Error:-", error);
       if (axios.isAxiosError(error)) {
         console.error("Login error:", error.response?.data?.error || error.message);
         alert((error as any).response?.data?.error || "Login failed");

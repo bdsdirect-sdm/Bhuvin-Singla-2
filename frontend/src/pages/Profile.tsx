@@ -116,7 +116,7 @@ const Profile = () => {
         doctorId: user.id,
         patientId,
         dateTime: utcDateTime,
-        timezone: user.timezone, // Add user timezone for reference on backend
+        timezone: user.timezone,
       });
 
       alert("Appointment scheduled!");
