@@ -130,8 +130,8 @@ const Profile = () => {
   return (
     <div className="profile-container">
 
-      <h1>Welcome, {user?.firstName}</h1>
-      <p>Role: {user?.type === 1 ? "Doctor" : "Patient"}</p>
+      <h1 className="dark-grey">Welcome, {user?.firstName}</h1>
+      <p className="dark-grey">Role: {user?.type === 1 ? "Doctor" : "Patient"}</p>
 
       {user?.type === 1 ? (
         // Doctor view: Patients and appointments
@@ -191,11 +191,13 @@ const Profile = () => {
             appointments.map((appointment) => (
               <div key={appointment.id} className="appointment-item">
                 <span>
-                  Doctor: {appointment.doctor.firstName}{" "}
-                  {appointment.doctor.lastName} - {appointment.doctorLocalTime}
                   <br />
                   Patient Appointment Time (Your Time):{" "}
                   {appointment.patientLocalTime}
+                  <br />
+                  Doctor: {appointment.doctor.firstName}{" "}
+                  {appointment.doctor.lastName} - {appointment.doctorLocalTime} ({appointment.doctor.timezone})
+
                 </span>
               </div>
             ))

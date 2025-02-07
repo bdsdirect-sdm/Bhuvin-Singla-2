@@ -9,6 +9,7 @@
   align-items: center;
   color: #fff;
   margin: 0;
+
   /* Light text color */
 }
 
@@ -20,13 +21,16 @@
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
   /* Shadow effect */
   width: 500px;
+  opacity: 0.85;
   /* Adjust width as needed */
 }
 
-h2 {
+.heading-txt {
   text-align: center;
   margin-bottom: 20px;
-  color: #70db70;
+  color: #dadada;
+
+  /* opacity: 1; */
   /* Green heading color, adjust as needed */
 }
 

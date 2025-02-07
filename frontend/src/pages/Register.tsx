@@ -121,7 +121,7 @@ const Register = () => {
   return (
     <div className="register-page">
       <div className="register-container">
-        <h2>Register</h2>
+        <h2 className="heading-txt">Register</h2>
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
@@ -129,16 +129,16 @@ const Register = () => {
         >
           {() => (
             <Form>
-              <Field name="firstName" placeholder="First Name" />
+              <Field name="firstName" placeholder="First Name" className="formik-input" />
               <ErrorMessage name="firstName" component="div" className="error" />
 
-              <Field name="lastName" placeholder="Last Name" />
+              <Field name="lastName" placeholder="Last Name" className="formik-input" />
               <ErrorMessage name="lastName" component="div" className="error" />
 
-              <Field name="email" type="email" placeholder="Email" />
+              <Field name="email" type="email" placeholder="Email" className="formik-input" />
               <ErrorMessage name="email" component="div" className="error" />
 
-              <Field name="password" type="password" placeholder="Password" />
+              <Field name="password" type="password" placeholder="Password" className="formik-input" />
               <ErrorMessage name="password" component="div" className="error" />
 
               <Field as="select" name="type">

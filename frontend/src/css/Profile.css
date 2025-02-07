@@ -1,88 +1,145 @@
+/* Profile page container */
 .profile-container {
-  max-width: 800px;
-  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  min-height: 100vh;
+  background-image: url("unfocused-view-airport-with-seats.jpg");
+  /* Replace with your background image */
+  background-size: cover;
+  background-position: center;
   padding: 20px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  font-family: "Poppins", sans-serif;
-  text-align: center;
+  color: #fff;
+  /* Light text color */
 }
 
-h1, h2 {
-  color: #333;
-  margin-bottom: 10px;
+/* Profile header and role section */
+h1 {
+  font-size: 28px;
+  color: #dadada;
+  /* Soft white color */
 }
 
 p {
-  font-size: 18px;
-  color: #666;
+  font-size: 20px;
+  color: #bfc7c7;
+  /* Slightly softer text for role display */
+  margin-bottom: 20px;
 }
 
+/* List container for data (patients/appointments) */
 .list-container {
-  margin-top: 20px;
-  text-align: left;
+  width: 100%;
+  max-width: 800px;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Dark background with transparency */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  /* Shadow effect */
+  margin-bottom: 30px;
 }
 
-.patient-item, .appointment-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
+h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #70db70;
+  /* Green heading color */
+  margin-bottom: 20px;
 }
 
-button {
-  background: #ff5e62;
-  color: white;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-button:hover {
-  background: #ff9966;
+.dark-grey {
+  color: #555555;
 }
 
 .no-data {
-  color: #999;
-  font-style: italic;
-}
-
-.patient-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-}
-
-.date-picker-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 50%;
-  margin-left: 10px;
-}
-
-.date-picker-container h3 {
-  margin: 0 0 10px;
+  text-align: center;
   font-size: 18px;
-  color: #333;
-}
-
-.date-picker-container button {
+  color: #999;
+  /* Soft gray for no data message */
   margin-top: 10px;
 }
 
-.profile-page .profile-container {
-  max-width: 1000px;
-  margin: 20px auto;
-  background-color: #f7f7f7;
+/* Patients and appointments styles */
+.patient-item,
+.appointment-item {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Slightly lighter background for items */
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  color: #fff;
 }
 
-.profile-page {
-  background-color: #f0f0f0;
+.patient-item span,
+.appointment-item span {
+  font-size: 16px;
+}
+
+/* Date picker container */
+.date-picker-container {
+  margin-top: 15px;
+}
+
+.date-picker-container h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #70db70;
+  /* Accent green text */
+}
+
+/* Buttons */
+button {
+  background-color: #70db70;
+  /* Green button */
+  color: #2c2c2c;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #52a852;
+  /* Darker green on hover */
+}
+
+button:disabled {
+  background-color: #444;
+  /* Disabled button color */
+  cursor: not-allowed;
+}
+
+/* DatePicker default styles override */
+.react-datepicker__input-container input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #2a2a2a;
+  /* Match input styles */
+  border: 1px solid #555;
+  border-radius: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .list-container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 18px;
+  }
 }

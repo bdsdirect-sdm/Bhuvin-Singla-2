@@ -1,66 +1,136 @@
 .login-page {
+  background-image: url("unfocused-view-airport-with-seats.jpg");
+  /* Replace with your background image URL */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: linear-gradient(to right, #667eea, #764ba2);
-  font-family: "Poppins", sans-serif;
+  color: #fff;
+  /* Light text color */
+  margin: 0;
 }
 
 .login-container {
-  background: white;
-  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Dark background with transparency */
+  padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 350px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  /* Shadow effect */
+  width: 400px;
+  /* Form width */
+  opacity: 0.85;
+}
+
+.header-text {
   text-align: center;
+  margin-bottom: 20px;
+  color: #dadada;
+  /* Light heading color */
+  font-size: 24px;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-h2 {
-  color: #444;
-  margin-bottom: 1rem;
-}
-
-input {
+/* Styling for the input fields */
+.formik-input {
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
+  /* Full width */
+  padding: 12px;
+  /* Increased padding for better usability */
+  margin-bottom: 15px;
+  /* Space between fields */
+  background-color: #2a2a2a;
+  /* Dark field background */
+  border: none;
+  /* Remove default browser styles */
+  color: #fff;
+  /* Light text color */
   border-radius: 5px;
+  /* Rounded corners */
+  box-sizing: border-box;
+  /* Prevent padding from affecting width */
   font-size: 16px;
-  transition: all 0.3s ease;
+  /* Increase font size for readability */
 }
 
-input:focus {
-  border-color: #667eea;
+/* Input field hover state */
+.formik-input:hover {
+  background-color: #393939;
+  /* Slightly lighter background on hover */
+  border: 1px solid #70db70;
+  /* Green border on hover */
+}
+
+/* Input field focus state */
+.formik-input:focus {
   outline: none;
-  box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+  /* Remove focus outline */
+  border: 1px solid #70db70;
+  /* Green border */
+  box-shadow: 0 0 8px rgba(112, 219, 112, 0.7);
+  /* Add subtle green glow */
+}
+
+/* Error message styling */
+.error {
+  color: red;
+  /* Error message color */
+  margin-top: 5px;
+  font-size: 12px;
 }
 
 button {
-  background: #667eea;
-  color: white;
+  width: 100%;
+  /* Full-width buttons */
   padding: 12px;
+  /* Increased padding for better usability */
+  margin-top: 15px;
+  /* Space above button */
+  background-color: #70db70;
+  /* Green button color */
   border: none;
+  color: #fff;
+  font-size: 16px;
+  /* Increase font size for readability */
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
-  transition: all 0.3s ease;
-  margin-top: 10px;
+  transition: background 0.3s ease;
+  /* Smooth transition effect */
 }
 
 button:hover {
-  background: #764ba2;
+  background-color: #52a852;
+  /* Darker green on hover */
 }
 
-.error {
-  color: red;
-  font-size: 14px;
-  margin-top: -5px;
-  text-align: left;
+/* Styling for select dropdown fields */
+select {
+  width: 100%;
+  padding: 12px;
+  /* Consistent padding with text fields */
+  margin-bottom: 15px;
+  background-color: #2a2a2a;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  /* Increase font size for readability */
+}
+
+/* Dropdown hover and focus state */
+select:hover,
+select:focus {
+  outline: 1px solid #70db70;
+  /* Green border */
+  background-color: #393939;
+  /* Slightly lighter background on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .login-container {
+    width: 90%;
+  }
 }
